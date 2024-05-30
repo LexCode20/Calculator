@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <form action="">
+        <div id="line">
+        </div>
+        <table>
+            <tr>
+                <caption><label for="count"><input id="L1" type="text" name="count" action="result" method="post"></label></caption>
+                <caption><label for="result"><input  id="L2" type="text" name="result" ></label></caption>
+            </tr>
+            <tr>
+                <th><input id="Cleaner" class="orange" type="button" value="C" onclick="count.value = ''"></th>
+                <th><input class="orange" type="button" value="⌫" onclick="count.value = count.value.toString().slice(0,-1)"></th>
+                <th><input class="orange" type="button" value="%" onclick="count.value += '%'"></th>
+                <th><input class="orange" type="button" value="÷" onclick="count.value += '/'"></th>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="count.value += '7'"></td>
+                <td><input type="button" value="8" onclick="count.value += '8'"></td>
+                <td><input type="button" value="9" onclick="count.value += '9'"></td>
+                <td><input class="orange" type="button" value="×" onclick="count.value += '*'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="count.value += '4'"></td>
+                <td><input type="button" value="5" onclick="count.value += '5'"></td>
+                <td><input type="button" value="6" onclick="count.value += '6'"></td>
+                <td><input class="orange" type="button" value="-" onclick="count.value += '-'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="count.value += '1'"></td>
+                <td><input type="button" value="2" onclick="count.value += '2'"></td>
+                <td><input type="button" value="3" onclick="count.value += '3'"></td>
+                <td><input class="orange" type="button" value="+" onclick="document.getElementById('L1').value += '+'"></td>
+            </tr>
+            <tr>
+                
+                <td><input class="orange" type="button" value="◫"></td>
+                <td><input type="button" value="0" id="" onclick="count.value += '0'"></td>
+                <td><input type="button" value="," id="" onclick="count.value += '.'"></td>
+                <td><input id="circle" type="button" value="=" onclick="document.getElementById('L2').value = eval(document.getElementById('L1').value)" class="equal"></td>
+            </tr>
+        </table>
+</body>
+<script src="app.js"></script>
+</html>
